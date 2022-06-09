@@ -57,10 +57,11 @@
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Delete</button>
-    </form>
+                    <a class="btn btn-warning" href="{{ route('mahasiswa.nilai',$mhs->id_mahasiswa) }}">Nilai</a>
+                </form>
     </td>
  </tr>
  @endforeach
- </table>
- {{ $mahasiswa->links() }}
+    </table>
+    {{ $paginate->links('pagination::bootstrap-4') }}
 @endsection
